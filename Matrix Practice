@@ -1,0 +1,124 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+using namespace std;
+
+int main() 
+{
+  char arrHost[4] = {'A','B','C','D'};
+  int menu;
+  int learn[4] = {0,0,0,0};
+  int arrMacAdd[4] = {50,51,52,53};
+  int arrSwitch[4] = {0,1,2,3};
+  int arrMatrix[4][9];
+  string count;
+
+  for(int i = 0; i < 4; i++)
+  {
+    for(int j = 0; j < 8; j++)
+    {
+      if(learn[3] == 1)
+      {
+        arrMatrix[i][3] = arrMacAdd[3];
+      }
+      else
+      {
+        for(int x = 0; x < 8; x++)
+         {
+          arrMatrix[i][x] = arrMacAdd[3];
+          arrMatrix[0][3] = 0;
+         }
+       // learn[3] = 1;
+       }
+     }
+      if(learn[2] == 1)
+      {
+        arrMatrix[i][2] = arrMacAdd[2];
+      }
+      else
+      {
+        for(int x = 0; x < 8; x++)
+        {
+         arrMatrix[i][x] = arrMacAdd[3];
+         arrMatrix[0][2] = 0;
+        }
+       // learn[2] = 1;
+       }
+     }
+      if(learn[0] == 1)
+      {
+        arrMatrix[1][0] = arrMacAdd[0];
+      }
+        else
+        {
+          for(int x = 0; x < 8; x++)
+          {
+            arrMatrix[1][x] = arrMacAdd[3];
+            arrMatrix[0][0] = 0;
+          }
+          learn[0] = 1;
+        }
+      if(learn[1] == 1)
+      {
+         arrMatrix[2][1] = arrMacAdd[1];
+      }
+      else
+      {
+      for(int x = 0; x < 8; x++)
+        {
+          arrMatrix[2][x] = arrMacAdd[3];
+          arrMatrix[0][1] = 0;
+        }
+        learn[1] = 1;
+      }
+    for(int a = 0; a < 4; a++)
+    {
+      for(int b = 0; b < 8; b++)
+      {
+       printf("%d     ", arrMatrix[a][b]);
+      }
+      printf("\n");
+    }
+    cout << endl;
+      return 0;
+    }
+    /*
+    
+
+  */
+/*
+  cout << "Which problem do you want? " << endl;
+  cout << "1: D->A " << endl; 
+  cout << "2: D->A " << endl; 
+  cout << "3: D->A " << endl; 
+  cout << "4: D->A " << endl;
+  cout << "5: Quit " << endl;
+  cin >> menu;
+  switch (menu) 
+  { 
+    case 1:
+    {
+      cout << "D->A" << endl;
+      break; 
+    } 
+    case 2: 
+    {
+      cout << "D->A" << endl;
+      break;
+    }
+    case 3: 
+    {
+      cout << "D->A" << endl;
+      break;
+    case 4: 
+    {
+      cout << "D->A" << endl;
+      break;
+    case 5: 
+    {
+     cout << "Quit Program " << endl;
+     break;
+    }
+  } 
+*/
