@@ -1,0 +1,89 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+
+using namespace std;
+
+int main() 
+{
+  char arrHost[4] = {'A','B','C','D'};
+  int learn[4] = {0,0,0,0};
+  int arrMacAdd[4] = {50,51,52,53};
+  int arrSwitch[4] = {0,1,2,3};
+  int arrMatrix[4][8];
+
+  for (int j = 0;j < 8; j++)
+  {
+    //Problem 1
+     if(learn[0] == 1)
+      {
+        arrMatrix[0][j] = 0;
+        arrMatrix[0][3] = arrMacAdd[3];
+      }
+      else
+      {
+        for(int x = 0; x < 8; x++)
+         {
+          arrMatrix[0][x] = arrMacAdd[3];
+          arrMatrix[0][3] = 0;
+         }
+      }
+      //learn[0] = 1;
+      //Problem 2
+      if(learn[3] == 1)
+      {
+        arrMatrix[1][j] = 0;
+        arrMatrix[1][2] = arrMacAdd[3];
+      }
+      else
+      {
+        for(int x = 0; x < 8; x++)
+         {
+          arrMatrix[1][x] = arrMacAdd[2];
+          arrMatrix[1][2] = 0;
+         }
+      }
+      //learn[3] = 1;
+      //Problem 3
+      if(learn[2] == 1)
+      {
+        arrMatrix[2][j] = 0;
+        arrMatrix[2][2] = arrMacAdd[3];
+      }
+      else
+      {
+        for(int x = 0; x < 8; x++)
+         {
+          arrMatrix[2][x] = arrMacAdd[2];
+          arrMatrix[2][0] = 0;
+         }
+      }
+      //learn[2] = 1;
+      //Problem 4
+      if(learn[0] == 1)
+      {
+        arrMatrix[3][j] = 0;
+        arrMatrix[3][2] = arrMacAdd[3];
+      }
+      else
+      {
+        for(int x = 0; x < 8; x++)
+         {
+          arrMatrix[3][x] = arrMacAdd[2];
+          arrMatrix[3][1] = 0;
+         }
+      }
+  }
+
+  for(int i = 0; i < 4; i++)
+  {
+    for(int j = 0; j < 8; j++)
+    {
+       printf("%d     ", arrMatrix[i][j]);
+     }
+   printf("\n");
+   cout << endl;
+  }
+  return 0;
+}
