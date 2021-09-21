@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class RPS
+{
+  private:
+    int game;
+    string currHand;
+
+  public:
+    class INVALID_HAND {};
+    RPS();
+    ~RPS();
+    void setHand(string hand)
+    {
+      if(hand != "rock" && hand != "paper" && hand != "scissors")
+      {
+        throw INVALID_HAND();
+      }
+      currHand = hand;
+    }
+    string getHand()
+    {
+      return currHand;
+    }
+    bool isWin(string oppHand)
+    {
+      if(currHand == "rock" && oppHand == "scissors" || 
+        currHand == "paper" && oppHand == "rock" || 
+        currHand == "scissors" && oppHand == "paper")
+      {
+        return true;
+      }
+      return false;
+    }
+
+};
+int main() 
+{
+  RPS player1;
+  RPS player2;
+  while(true)
+  {
+    try
+    {
+      cout << "Enter Hand P1: " << endl;
+      string handP1;
+      cin >> handP1;
+      player1.setHand(handP1);
+      break;
+    }
+    catch (RPS::INVALID_HAND)
+    {
+      cout << "INVALID hand!" << endl;
+    }
+  }
+}
