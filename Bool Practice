@@ -1,0 +1,22 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  bool hurt;
+  cout << "are you hurt" << endl;
+  cin >> hurt;
+  if(hurt == true)
+  {
+    cout << "really hurt" << endl;
+  }
+  else if (hurt == false)
+  {
+    cout << "not hurt" << endl;
+  }
+  return hurt;
+}
