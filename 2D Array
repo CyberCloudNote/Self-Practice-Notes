@@ -1,0 +1,85 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+  int val;
+  int row = 2;
+  int col = 2;
+  bool equal = true;
+  int arrC[2][2];
+  int arrA[2][2];
+  int arrB[2][2];
+
+  cout << "Populating Array A" << endl;
+  for(int i = 0; i < row; i++)
+  {
+    for(int j = 0; j < col; j++)
+    {
+      cout << "What is your value for " << i << " " << j <<"?";
+      cin >> val;
+      arrA[i][j] = val;
+    } 
+  }
+
+  cout << "Populating Array B" << endl;
+  for(int i = 0; i < row; i++)
+  {
+    for(int j = 0; j < col; j++)
+    {
+      cout << "What is your values for " << i << " " << j <<"?";
+      cin >> val;
+      arrB[i][j] = val;
+    } 
+  }
+  cout << endl;
+
+//Part A
+  for(int i = 0; i < row; i++)
+  {
+    for(int j = 0; j < col; j++)
+    {
+      if(arrA[i][j] != arrB[i][j])
+      {
+        equal = false;
+      }
+    }
+    if(equal == false)
+    {
+      cout << "The arrays are not identiocle." << endl;
+      break;
+    }
+  }
+  if(equal == true)
+  {
+    cout << "The arrays are identicle." << endl;
+  }
+  cout << endl;
+
+//Part B
+  cout << "Array A - Array B" << endl;
+  for(int i = 0; i < row; i++)
+  {
+    for(int j = 0; j < col; j++)
+    {
+      arrC[i][j] = arrA[i][j] - arrB[i][j];
+      cout << arrC[i][j] << " ";
+    } 
+    cout << endl;
+  }
+  cout << endl;
+
+//Part C
+  cout << "The diagonal values are: ";
+  for (int i = 0; i < row; i++) 
+  { 
+    for (int j = 0; j < col; j++) 
+    { 
+      if (i == j)
+      {
+        cout << arrA[i][j] << " "; 
+      }           
+    } 
+  } 
+}
