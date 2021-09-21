@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+}
+
+int numDupli(int myArr[], int sizeArr)
+{
+  int count;
+  for (int i = 0; i < sizeArr - 1; i++)
+  {
+    for (int j = i + 1;j < sizeArr; j++)
+    {
+      if (myArr[i] == myArr[j])
+      {
+        count++;
+      }
+    }
+  }
+  return count;
+}
+
+int sortedDupli(int myArr[], int sizeArr)
+{
+    int count = 0; 
+    for (int i = 0; i < sizeArr; i++)
+    {
+      if (arr[i] == arr[i + 1])
+      {
+        count++;
+      } 
+    }
+    return count;
+}
