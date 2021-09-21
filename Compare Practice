@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  string word0 = "Andy";
+  string word1 = "Andy";
+  string word2 = "Chu";
+  int count = 0;
+
+  if(word0.compare(word2) == 0)
+  {
+    cout << "match";
+    count++;
+  }
+  else
+  {
+    cout<< "does not match";
+  }
+  cout << count;
+  return 0;
+}
