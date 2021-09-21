@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+  vector<int> numbers;
+  int sell = 6;
+  int total; 
+  for(int i = 0; i < 10; i++)
+  {
+    numbers.push_back(i);
+  }
+
+  for(int i = 10; 0 < i; i--)
+  {
+    total = total + numbers[i];
+    if(sell == i)
+    {
+      cout << total;
+    }
+  }
+  
+  return 0;
+}
