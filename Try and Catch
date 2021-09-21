@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int a = 10;
+  int b = 0;
+  int test;
+  try { 
+      cout << "Inside try \n"; 
+      if (test < 0) 
+      { 
+        throw x; 
+        cout << "After throw (Never executed) \n"; 
+      } 
+   } 
+   catch (int x ) { 
+      cout << "Exception Caught \n"; 
+   } 
+}
