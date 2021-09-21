@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int recur(int num);
+
+int main() {
+  int num;
+
+  cout << "Test " << endl;
+  cin >> num;
+  recur(num);
+  cout << recur(num) << endl;
+  return 0;
+}
+int recur(int num)
+{
+  int t = 1;
+  if(num <= 1)
+  {
+    return 1;
+  }
+  else
+  {
+    return num*recur(num-1);
+  }
+}
