@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int z(int k, int n)
+{
+  if(k > n)
+  {
+    return z(k-n, n);
+  }
+  return k;
+}
+
+
+int main() {
+  cout << z(9,5);
+  return 0;
+}
