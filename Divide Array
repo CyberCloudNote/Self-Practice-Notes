@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+
+void divideArr(int arr[], int start, int size, int oldItem, int newItem)
+{
+  int middle = start + (size - start)/2;
+
+  for(int i = start; i < middle; i++)
+  {
+    if(arr[i] == oldItem)
+    {
+      arr[i] = newItem;
+    }
+  }
+
+  for(int j = middle; j < size; j++)
+  {
+    if(arr[j] == oldItem)
+    {
+      arr[j] = newItem;
+    }
+  }
+}
+
+int main() 
+{
+  //old = 1, new = 2
+  int arr[] = {1,2,1,1,1,2,2,1,2,1};
+  int size = sizeof(arr) / sizeof(arr[0]);
+  int oldNum, newNum, temp[size];
+
+  cout << "What number represents your old item? ";
+  cin >> oldNum;
+  cout << "What number represents your new item? ";
+  cin >> newNum;
+
+  cout << "Given Array: ";
+  for(int i = 0; i < size; i++)
+  {
+    cout << " " << arr[i] << " ";
+  }
+  cout << endl;
+
+  divideArr(arr, 0,size, oldNum, newNum);
+
+  cout << "Altered Array: ";
+  for(int i = 0; i < size; i++)
+  {
+    cout << " " << arr[i] << " ";
+  }
+}
