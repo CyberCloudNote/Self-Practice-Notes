@@ -1,0 +1,48 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int arr[10] = {7,12,19,3,18,4,2,6,15,8};
+
+int main() {
+  vector<int> list1;
+  vector<int> list2;
+  vector<int> finalList;
+
+  for(int i = 0; i < 5; i++)
+  {
+    list1.push_back(arr[i]);
+  }
+
+  for(int j = 5; j < 10; j++)
+  {
+    list2.push_back(arr[j]);
+  }
+
+  sort(list1.begin(), list1.end());
+  sort(list2.begin(), list2.end());
+
+  for(int f = 0; f < 10; f++)
+  {
+    if(list1[f] < list2[f])
+    {
+      finalList.push_back(list1[f]);
+      finalList.push_back(list2[f]);
+    }
+    else if(list2[f] < list1[f])
+    {
+      finalList.push_back(list2[f]);
+      finalList.push_back(list1[f]);
+    }
+  }
+
+  sort(finalList.begin(), finalList.end());
+  
+  cout << "Final List: ";
+  for(int k = 0; k < 10; k++)
+  {
+    cout << finalList[k] << ", ";
+  }
+}
